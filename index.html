@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .click-effect:active {
+            transform: scale(0.9);
+            transition: transform 0.1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-900">
+
+<div class="w-96 p-8 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 shadow-2xl">
+  <div class="relative">
+    <div class="flex justify-between mb-4">
+      <button id="btn" class="overflow-hidden relative w-26 h-7 bg-gradient-to-br from-sky-700 to-purple-700 text-white border-none rounded-md text-sm font-bold cursor-pointer relative z-10 group m-2 click-effect">
+        <h5 id="clicker">Click to</h5>
+        <span class="absolute w-36 h-32 -top-8 -left-2 bg-green-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"></span>
+        <span class="absolute w-36 h-32 -top-8 -left-2 bg-green-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"></span>
+        <span class="absolute w-36 h-32 -top-8 -left-2 bg-gradient-to-br from-sky-900 to-purple-00 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"></span>
+        <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-1 m-0 left-2 z-10 text-sm"><h5 id="down">Download⬇️</h5></span>
+      </button>
+      <span id="percent" class="text-white/80 font-medium px-2">0%</span>
+    </div>
+    <div class="relative h-4 bg-gray-700/50 rounded-full overflow-hidden backdrop-blur-sm">
+      <div class="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-fuchsia-600/20 to-cyan-600/20 animate-pulse"></div>
+      <!-- ********* -->
+      <div id="progress" style="width: 0%;" class="h-full rounded-full transition-all duration-300 ease-out relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-cyan-600"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shine_2s_linear_infinite]"></div>
+        <div class="absolute inset-0">
+          <div
+            style="top: 20%; left: 30%; animation-delay: 0s;"
+            class="absolute w-1 h-1 bg-white/80 rounded-full animate-[particle_2s_linear_infinite]"
+          ></div>
+          <div
+            style="top: 50%; left: 70%; animation-delay: 0.4s;"
+            class="absolute w-1 h-1 bg-white/80 rounded-full animate-[particle_2s_linear_infinite]"
+          ></div>
+          <div
+            style="top: 80%; left: 10%; animation-delay: 0.8s;"
+            class="absolute w-1 h-1 bg-white/80 rounded-full animate-[particle_2s_linear_infinite]"
+          ></div>
+          <div
+            style="top: 30%; left: 50%; animation-delay: 1.2s;"
+            class="absolute w-1 h-1 bg-white/80 rounded-full animate-[particle_2s_linear_infinite]"
+          ></div>
+          <div
+            style="top: 60%; left: 20%; animation-delay: 1.6s;"
+            class="absolute w-1 h-1 bg-white/80 rounded-full animate-[particle_2s_linear_infinite]"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute -top-1 -left-1 w-2 h-2 bg-violet-500/50 rounded-full animate-ping"></div>
+    <div class="absolute -bottom-1 -right-1 w-2 h-2 bg-cyan-500/50 rounded-full animate-ping delay-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded"></div>
+  </div>
+  <div class="flex justify-between mt-4">
+    <div class="flex items-center gap-2">
+      <div class="w-1 h-2 rounded-full bg-violet-500 animate-ping delay-500"></div>
+      <div class="w-1 h-2 rounded-full bg-violet-500 animate-ping delay-500"></div>
+      <div class="w-1 h-2 rounded-full bg-violet-500 animate-ping delay-500"></div>
+      <span class="text-xs text-white/60">KK Song.mp3</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-xs text-white/60">ETA: 6 sec</span>
+      <div class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
